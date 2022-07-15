@@ -6,7 +6,9 @@ import 'verif.dart';
 import 'my_classes.dart';
 import 'lobby.dart';
 import 'cart.dart';
-
+import 'Screen/intro1.dart';
+import 'Screen/intro2.dart';
+import 'Screen/intro3.dart';
 void main() {
   runApp(MaterialApp(initialRoute: "/intro3", routes: {
     "/": (context) => SignUp(),
