@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import "my_classes.dart";
 
 const ColorTxt = 0xFFBFBFBF;
@@ -156,10 +157,13 @@ class _SignUpState extends State<SignUp> {
                   color: Color.fromARGB(255, 0, 47, 129),
                 ),
                 SizedBox(width: 20),
-                Icon(Icons.account_box_rounded,
-                    size: 30, color: Colors.green[800]),
+                SvgPicture.asset(
+                          "assets/icons/google-icon.svg",),
+                // Icon(Icons.account_box_rounded,
+                //     size: 30, color: Colors.green[800]),
                 SizedBox(width: 20),
-                Icon(Icons.mail, size: 30, color: Colors.red[600]),
+                 SvgPicture.asset(
+                          "assets/icons/twitter.svg",),
               ],
             ),
             SizedBox(

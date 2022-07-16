@@ -39,6 +39,7 @@ dependencies:
   custom_navigation_bar: ^0.8.2
   flutter_icons: ^1.1.0
   flutter_svg: ^1.0.0
+  flutter_swipe_action_cell: ^3.0.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
