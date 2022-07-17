@@ -107,9 +107,7 @@ const ColorTxt = 0xFFBFBFBF;
   Cart(product: items[2], numOfItem: 1),
   Cart(product: items[3], numOfItem:3),
   Cart(product: items[4], numOfItem:2),
-    Cart(product: items[4], numOfItem:2),
-      Cart(product: items[4], numOfItem:2),
-        Cart(product: items[4], numOfItem:2),
+
 ];
 class CartP extends StatefulWidget {
   @override
@@ -220,6 +218,7 @@ class _CartPState extends State<CartP> {
        
        
       
+       
        
       
  ,

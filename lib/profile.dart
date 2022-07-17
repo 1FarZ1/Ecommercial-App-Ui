@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-
-
 class Profile extends StatefulWidget {
   @override
   State<Profile> createState() => _ProfileState();
@@ -13,7 +11,6 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
@@ -25,30 +22,29 @@ class _ProfileState extends State<Profile> {
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
-          leading: Icon(Icons.arrow_back_ios,
-          color: Colors.black,
-            ),
+          leading: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+          ),
         ),
         body: SafeArea(
             child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0),
           child: Column(
             children: [
-              SizedBox(height: 40),
+              SizedBox(height: 15),
               Text("Complete Profile",
                   style: TextStyle(color: Colors.black, fontSize: 40)),
               SizedBox(
                 height: 15,
               ),
               Text("Complete Your details or connect",
-
                   style: TextStyle(color: Colors.grey)),
               SizedBox(
                 height: 5,
               ),
-              Text("with social media",
-                  style: TextStyle(color: Colors.grey)),
-              SizedBox(height: 45),
+              Text("with social media", style: TextStyle(color: Colors.grey)),
+              SizedBox(height: 25),
               TextField(
                 decoration: InputDecoration(
                     labelText: "   First Name",
@@ -107,7 +103,7 @@ class _ProfileState extends State<Profile> {
               SizedBox(
                 height: 25,
               ),
-               TextField(
+              TextField(
                 decoration: InputDecoration(
                     labelText: "  Phone Number",
                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -135,7 +131,8 @@ class _ProfileState extends State<Profile> {
               ),
               SizedBox(
                 height: 25,
-              ), TextField(
+              ),
+              TextField(
                 decoration: InputDecoration(
                     labelText: "  Adress",
                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -161,33 +158,36 @@ class _ProfileState extends State<Profile> {
                     hintText: "  Enter Your Adress ",
                     fillColor: Colors.white),
               ),
-              SizedBox(
-                height:15
-              ),
-            
-              SizedBox(height: 20),
+              SizedBox(height: 40),
               ButtonTheme(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Color(0xFFF77546),
-                    fixedSize: const Size(300, 55),
+                    fixedSize: const Size(350, 55),
                     shape: const StadiumBorder(),
                   ),
                   child: const Text('Continue'),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, "/verif");
+                  },
                 ),
               ),
               SizedBox(
-                height: 24,
+                height: 65,
               ),
-             
-                  Text("By continuing You confirm that u agree",style: TextStyle(fontSize:13,color:Color.fromARGB(255, 149, 147, 144)),),
-                  SizedBox(
-                    height: 1,
-                  ),
-                  Text("with our terms and conditions",style: TextStyle(color:Color.fromARGB(255, 149, 147, 144),fontSize:13),)
-                
-              
+              Text(
+                "By continuing You confirm that u agree",
+                style: TextStyle(
+                    fontSize: 13, color: Color.fromARGB(255, 149, 147, 144)),
+              ),
+              SizedBox(
+                height: 1,
+              ),
+              Text(
+                "with our terms and conditions",
+                style: TextStyle(
+                    color: Color.fromARGB(255, 149, 147, 144), fontSize: 13),
+              )
             ],
           ),
         )),
