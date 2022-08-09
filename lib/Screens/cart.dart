@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'my_classes.dart';
+import '../my_classes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 const kPrimaryColor = Color(0xFFFF7643);

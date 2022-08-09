@@ -40,6 +40,10 @@ dependencies:
   flutter_icons: ^1.1.0
   flutter_svg: ^1.0.0
   flutter_swipe_action_cell: ^3.0.4
+  provider: ^6.0.3
+  firebase_auth: ^3.6.1
+  cloud_firestore: ^3.4.2
+  firebase_core: ^1.20.0
   
   
 dev_dependencies:

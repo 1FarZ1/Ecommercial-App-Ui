@@ -33,6 +33,7 @@ class _ProfileState extends State<Profile> {
           child: Column(
             children: [
               SizedBox(height: 15),
+              //
               Text("Complete Profile",
                   style: TextStyle(color: Colors.black, fontSize: 40)),
               SizedBox(
@@ -45,6 +46,7 @@ class _ProfileState extends State<Profile> {
               ),
               Text("with social media", style: TextStyle(color: Colors.grey)),
               SizedBox(height: 25),
+              
               TextField(
                 decoration: InputDecoration(
                     labelText: "   First Name",

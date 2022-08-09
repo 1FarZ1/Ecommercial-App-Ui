@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'custom_classes.dart';
-import 'constants.dart';
+import '../custom_classes.dart';
+import '../constants.dart';
 
 class ResetPasswordPage extends StatefulWidget {
   @override

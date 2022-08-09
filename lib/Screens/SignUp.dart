@@ -1,18 +1,19 @@
+import 'package:eapp/Networking/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import "my_classes.dart";
+import "../my_classes.dart";
 
 const ColorTxt = 0xFFBFBFBF;
 
-class Register extends StatefulWidget {
+class SignUp extends StatefulWidget {
   @override
-  State<Register> createState() => _RegisterState();
+  State<SignUp> createState() => _SignUpState();
 }
 
 FontWeight based = FontWeight.bold;
 
-class _RegisterState extends State<Register> {
+class _SignUpState extends State<SignUp> {
   bool val = true;
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class _RegisterState extends State<Register> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "Sign Up",
+          "Sign in",
           style: TextStyle(color: Color(ColorTxt)),
         ),
         centerTitle: true,
@@ -39,21 +40,21 @@ class _RegisterState extends State<Register> {
           children: [
             SizedBox(height: 50),
             Text(
-              "Register Account",
+              "Welcome Back",
               style: TextStyle(
-                  color: Colors.black, fontSize: 30, fontWeight: based),
+                  color: Colors.black, fontSize: 40, fontWeight: based),
             ),
             SizedBox(
               height: 15,
             ),
-            Text("Complete your details or continue ",
+            Text("Sign up with your email or password ",
                 style: TextStyle(color: Color(ColorTxt), fontWeight: based)),
             SizedBox(
               height: 5,
             ),
-            Text("with your social media",
+            Text("or continue with your social media",
                 style: TextStyle(color: Color(ColorTxt), fontWeight: based)),
-            SizedBox(height: 33),
+            SizedBox(height: 65),
             TextField(
               decoration: InputDecoration(
                   labelText: "Email",
@@ -83,7 +84,7 @@ class _RegisterState extends State<Register> {
                   fillColor: Colors.white),
             ),
             SizedBox(
-              height: 35,
+              height: 30,
             ),
             TextFormField(
               obscureText: true,
@@ -114,37 +115,25 @@ class _RegisterState extends State<Register> {
                   fillColor: Colors.white),
             ),
             SizedBox(
-              height: 35,
+              height: 4,
             ),
-             TextFormField(
-              obscureText: true,
-              decoration: InputDecoration(
-                  labelText: "Password",
-                  suffixIconConstraints: BoxConstraints(
-                    minWidth: 70,
-                  ),
-                  floatingLabelBehavior: FloatingLabelBehavior.always,
-                  suffixIcon: IconButton(
-                    onPressed: () {
-                      print("pressed");
-                    },
-                    icon: Icon(Icons.lock),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(70.0),
-                    borderSide: BorderSide(
-                      width: 1,
-                      style: BorderStyle.none,
-                    ),
-                  ),
-                  filled: true,
-                  hintStyle: TextStyle(
-                    color: Color(ColorTxt),
-                  ),
-                  hintText: "  Enter Your Password",
-                  fillColor: Colors.white),
+            Row(
+              children: [
+                MyWidget(),
+                SizedBox(width: 95),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/reset");
+                  },
+                  child: Text("Forget Password",
+                      style: TextStyle(
+                          color: Color(ColorTxt),
+                          decoration: TextDecoration.underline,
+                          fontWeight: based)),
+                ),
+              ],
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             ButtonTheme(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -154,7 +143,8 @@ class _RegisterState extends State<Register> {
                 ),
                 child: const Text('Continue'),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, "/profile");
+                  AuthManager().SignInAnonmy();
+                  Navigator.pushReplacementNamed(context, "/success");
                 },
               ),
             ),
@@ -164,46 +154,47 @@ class _RegisterState extends State<Register> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset(
-                  "assets/icons/facebook-2.svg",
+                Icon(
+                  Icons.facebook_rounded,
+                  size: 30,
+                  color: Color.fromARGB(255, 0, 47, 129),
                 ),
-                SizedBox(width: 30),
+                SizedBox(width: 20),
                 SvgPicture.asset(
                   "assets/icons/google-icon.svg",
                 ),
                 // Icon(Icons.account_box_rounded,
                 //     size: 30, color: Colors.green[800]),
-                SizedBox(width: 30),
+                SizedBox(width: 20),
                 SvgPicture.asset(
                   "assets/icons/twitter.svg",
                 ),
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
-                Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                            text:"by continuing you confirm that you agree\n",
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an Account ? ",
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 15,
                     color: Color(ColorTxt),
-                      ),),
-                      TextSpan(
-                          text:"          With our terms and conditions",
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Color(ColorTxt),)
-                      )
-                    ]
-                  )
-                  
                   ),
-
+                ),
                 //will change this to text button
-      
+                GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, "/register");
+                    },
+                    child: Text(
+                      "Sign up",
+                      style: TextStyle(color: Colors.orange, fontSize: 15),
+                    ))
+              ],
+            )
           ],
         ),
       )),

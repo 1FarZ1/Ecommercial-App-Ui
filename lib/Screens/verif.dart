@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
-import 'my_classes.dart';
+import '../my_classes.dart';
 import 'package:pinput/pinput.dart';
 
 const ColorTxt = 0xFFBFBFBF;
