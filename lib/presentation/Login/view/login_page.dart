@@ -1,9 +1,10 @@
 import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
-import '../../../constants.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -139,12 +140,12 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Text(
               "Don't have an account? ",
-              style: TextStyle(color:  ColorManager.textColor, fontSize: 20),
+              style: TextStyle(color: ColorManager.textColor, fontSize: 20),
             ),
             GestureDetector(
-                child: const Text(
+                child: Text(
               "Sign Up",
-              style: const TextStyle(color: Color(0xFFFF7643), fontSize: 20),
+              style: TextStyle(color: ColorManager.orange, fontSize: 20),
             ))
           ],
         )

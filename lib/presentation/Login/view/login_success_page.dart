@@ -1,10 +1,10 @@
+import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
-import '../../../constants.dart';
-
-const ColorTxt = 0xFFBFBFBF;
 
 class LoginSuccessPage extends StatefulWidget {
+  const LoginSuccessPage({Key? key}) : super(key: key);
+
   @override
   State<LoginSuccessPage> createState() => _LoginSuccessPageState();
 }
@@ -15,27 +15,27 @@ class _LoginSuccessPageState extends State<LoginSuccessPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color(0xffF8F9F9),
-        title: Text(
+        backgroundColor: const Color(0xffF8F9F9),
+        title: const Text(
           "Login Success",
-          style: TextStyle(color: textColor),
+          style: TextStyle(color: ColorManager.ColorTxt),
         ),
         elevation: 0,
-        leading: SizedBox(),
+        leading: const SizedBox(),
       ),
       body: Padding(
         padding: const EdgeInsets.only(bottom: 40),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image(image: AssetImage("assets/images/success.png")),
-            Text(
+            const Image(image: AssetImage("assets/images/success.png")),
+            const Text(
               "Login Success",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+              style:  TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,
             ),
             OrangeButton(
-              padding: EdgeInsets.fromLTRB(24, 20, 23, 20),
+              padding: const EdgeInsets.fromLTRB(24, 20, 23, 20),
               onTap: () {
                 Navigator.pushReplacementNamed(context, "/home");
               },

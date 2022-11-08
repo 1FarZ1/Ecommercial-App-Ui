@@ -1,10 +1,9 @@
 import 'package:eapp/data/Networking/auth.dart';
+import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import "../my_classes.dart";
-
-const ColorTxt = 0xFFBFBFBF;
 
 class SignUp extends StatefulWidget {
   @override
@@ -21,16 +20,16 @@ class _SignUpState extends State<SignUp> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Sign in",
-          style: TextStyle(color: Color(ColorTxt)),
+          style: TextStyle(color: ColorManager.ColorTxt),
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
+        leading: const Icon(
           Icons.arrow_back_ios,
-          color: Color(ColorTxt),
+          color: ColorManager.ColorTxt,
         ),
       ),
       body: SafeArea(
@@ -38,106 +37,104 @@ class _SignUpState extends State<SignUp> {
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0),
         child: Column(
           children: [
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Text(
               "Welcome Back",
               style: TextStyle(
                   color: Colors.black, fontSize: 40, fontWeight: based),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Text("Sign up with your email or password ",
-                style: TextStyle(color: Color(ColorTxt), fontWeight: based)),
-            SizedBox(
+                style:
+                    TextStyle(color: const Color(ColorTxt), fontWeight: based)),
+            const SizedBox(
               height: 5,
             ),
             Text("or continue with your social media",
-                style: TextStyle(color: Color(ColorTxt), fontWeight: based)),
-            SizedBox(height: 65),
+                style:
+                    TextStyle(color: const Color(ColorTxt), fontWeight: based)),
+            const SizedBox(height: 65),
             TextField(
               decoration: InputDecoration(
                   labelText: "Email",
                   floatingLabelAlignment: FloatingLabelAlignment.start,
                   floatingLabelBehavior: FloatingLabelBehavior.always,
-                  suffixIconConstraints: BoxConstraints(
+                  suffixIconConstraints: const BoxConstraints(
                     minWidth: 70,
                   ),
                   suffixIcon: IconButton(
-                    onPressed: () {
-                      print("pressed");
-                    },
-                    icon: Icon(Icons.mail_outline),
+                    onPressed: () {},
+                    icon: const Icon(Icons.mail_outline),
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(70.0),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       width: 1,
                       style: BorderStyle.none,
                     ),
                   ),
                   filled: true,
-                  hintStyle: TextStyle(
-                    color: Color(ColorTxt),
+                  hintStyle: const TextStyle(
+                    color: ColorManager.ColorTxt,
                   ),
                   hintText: "  Enter Your Email",
                   fillColor: Colors.white),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
                   labelText: "Password",
-                  suffixIconConstraints: BoxConstraints(
+                  suffixIconConstraints: const BoxConstraints(
                     minWidth: 70,
                   ),
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                   suffixIcon: IconButton(
-                    onPressed: () {
-                      print("pressed");
-                    },
-                    icon: Icon(Icons.lock),
+                    onPressed: () {},
+                    icon: const Icon(Icons.lock),
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(70.0),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       width: 1,
                       style: BorderStyle.none,
                     ),
                   ),
                   filled: true,
-                  hintStyle: TextStyle(
-                    color: Color(ColorTxt),
+                  hintStyle: const TextStyle(
+                    color: ColorManager.ColorTxt,
                   ),
                   hintText: "  Enter Your Password",
                   fillColor: Colors.white),
             ),
-            SizedBox(
+            const SizedBox(
               height: 4,
             ),
             Row(
               children: [
                 MyWidget(),
-                SizedBox(width: 95),
+                const SizedBox(width: 95),
                 GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, "/reset");
                   },
                   child: Text("Forget Password",
                       style: TextStyle(
-                          color: Color(ColorTxt),
+                          color: const Color(ColorTxt),
                           decoration: TextDecoration.underline,
                           fontWeight: based)),
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ButtonTheme(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xFFF77546),
+                  primary: const Color(0xFFF77546),
                   fixedSize: const Size(300, 55),
                   shape: const StadiumBorder(),
                 ),
@@ -148,40 +145,40 @@ class _SignUpState extends State<SignUp> {
                 },
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 70,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
+                const Icon(
                   Icons.facebook_rounded,
                   size: 30,
                   color: Color.fromARGB(255, 0, 47, 129),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 SvgPicture.asset(
                   "assets/icons/google-icon.svg",
                 ),
                 // Icon(Icons.account_box_rounded,
                 //     size: 30, color: Colors.green[800]),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 SvgPicture.asset(
                   "assets/icons/twitter.svg",
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Don't have an Account ? ",
                   style: TextStyle(
                     fontSize: 15,
-                    color: Color(ColorTxt),
+                    color:  ColorManager.ColorTxt,
                   ),
                 ),
                 //will change this to text button
@@ -191,7 +188,8 @@ class _SignUpState extends State<SignUp> {
                     },
                     child: Text(
                       "Sign up",
-                      style: TextStyle(color: Colors.orange, fontSize: 15),
+                      style:
+                          TextStyle(color: ColorManager.orange, fontSize: 15),
                     ))
               ],
             )

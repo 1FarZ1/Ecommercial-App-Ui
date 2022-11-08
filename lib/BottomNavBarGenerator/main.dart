@@ -1,8 +1,10 @@
+// ignore_for_file: constant_identifier_names, must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 enum ThemeStyle {
   Dribbble,
@@ -17,6 +19,8 @@ enum ThemeStyle {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -44,9 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
   late ThemeStyle value;
   ThemeStyle _currentStyle = ThemeStyle.NotificationBadge;
 
-  List<int> _badgeCounts = List<int>.generate(5, (index) => index);
+  final List<int> _badgeCounts = List<int>.generate(5, (index) => index);
 
-  List<bool> _badgeShows = List<bool>.generate(5, (index) => true);
+  final List<bool> _badgeShows = List<bool>.generate(5, (index) => true);
 
   @override
   Widget build(BuildContext context) {
@@ -203,30 +207,30 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildTitle() {
     return CustomNavigationBar(
       iconSize: 30.0,
-      selectedColor: Color(0xff040307),
-      strokeColor: Color(0x30040307),
-      unSelectedColor: Color(0xffacacac),
+      selectedColor: const Color(0xff040307),
+      strokeColor: const Color(0x30040307),
+      unSelectedColor: const Color(0xffacacac),
       backgroundColor: Colors.white,
       items: [
         CustomNavigationBarItem(
-          icon: Icon(Icons.home),
-          title: Text("Home"),
+          icon: const Icon(Icons.home),
+          title: const Text("Home"),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
-          title: Text("Cart"),
+          icon: const Icon(Icons.shopping_cart),
+          title: const Text("Cart"),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.lightbulb_outline),
-          title: Text("Explore"),
+          icon: const Icon(Icons.lightbulb_outline),
+          title: const Text("Explore"),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.search),
-          title: Text("Search"),
+          icon: const Icon(Icons.search),
+          title: const Text("Search"),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.account_circle),
-          title: Text("Me"),
+          icon: const Icon(Icons.account_circle),
+          title: const Text("Me"),
         ),
       ],
       currentIndex: _currentIndex,
@@ -239,36 +243,36 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _buildNotificationBadge() {
-    print("notification");
+  
     return CustomNavigationBar(
       iconSize: 30.0,
-      selectedColor: Color(0xff040307),
-      strokeColor: Color(0x30040307),
-      unSelectedColor: Color(0xffacacac),
+      selectedColor: const Color(0xff040307),
+      strokeColor: const Color(0x30040307),
+      unSelectedColor: const Color(0xffacacac),
       backgroundColor: Colors.white,
       items: [
         CustomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: const Icon(Icons.home),
           badgeCount: _badgeCounts[0],
           showBadge: _badgeShows[0],
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.shopping_bag),
+          icon: const Icon(Icons.shopping_bag),
           badgeCount: _badgeCounts[1],
           showBadge: _badgeShows[1],
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.lightbulb_outline),
+          icon: const Icon(Icons.lightbulb_outline),
           badgeCount: _badgeCounts[2],
           showBadge: _badgeShows[2],
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.search),
+          icon: const Icon(Icons.search),
           badgeCount: _badgeCounts[3],
           showBadge: _badgeShows[3],
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.account_circle),
+          icon: const Icon(Icons.account_circle),
           badgeCount: _badgeCounts[4],
           showBadge: _badgeShows[4],
         ),
@@ -288,23 +292,23 @@ class _MyHomePageState extends State<MyHomePage> {
       iconSize: 30.0,
       selectedColor: Colors.white,
       strokeColor: Colors.white,
-      unSelectedColor: Color(0xff6c788a),
-      backgroundColor: Color(0xff040307),
+      unSelectedColor: const Color(0xff6c788a),
+      backgroundColor: const Color(0xff040307),
       items: [
         CustomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: const Icon(Icons.home),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
+          icon: const Icon(Icons.shopping_cart),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.lightbulb_outline),
+          icon: const Icon(Icons.lightbulb_outline),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.search),
+          icon: const Icon(Icons.search),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.account_circle),
+          icon: const Icon(Icons.account_circle),
         ),
       ],
       currentIndex: _currentIndex,
@@ -319,25 +323,25 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildLightDesign() {
     return CustomNavigationBar(
       iconSize: 30.0,
-      selectedColor: Color(0xff040307),
-      strokeColor: Color(0x30040307),
-      unSelectedColor: Color(0xffacacac),
+      selectedColor: const Color(0xff040307),
+      strokeColor: const Color(0x30040307),
+      unSelectedColor: const Color(0xffacacac),
       backgroundColor: Colors.white,
       items: [
         CustomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: const Icon(Icons.home),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
+          icon: const Icon(Icons.shopping_cart),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.lightbulb_outline),
+          icon: const Icon(Icons.lightbulb_outline),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.search),
+          icon: const Icon(Icons.search),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.account_circle),
+          icon: const Icon(Icons.account_circle),
         ),
       ],
       currentIndex: _currentIndex,
@@ -353,25 +357,25 @@ class _MyHomePageState extends State<MyHomePage> {
     return CustomNavigationBar(
       elevation: 0.0,
       iconSize: 30.0,
-      selectedColor: Color(0xff625aff),
-      strokeColor: Color(0xff625aff),
+      selectedColor: const Color(0xff625aff),
+      strokeColor: const Color(0xff625aff),
       unSelectedColor: Colors.white,
-      backgroundColor: Color(0xffa9a5f2),
+      backgroundColor: const Color(0xffa9a5f2),
       items: [
         CustomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: const Icon(Icons.home),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
+          icon: const Icon(Icons.shopping_cart),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.lightbulb_outline),
+          icon: const Icon(Icons.lightbulb_outline),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.search),
+          icon: const Icon(Icons.search),
         ),
         CustomNavigationBarItem(
-          icon: Icon(Icons.account_circle),
+          icon: const Icon(Icons.account_circle),
         ),
       ],
       currentIndex: _currentIndex,
@@ -386,31 +390,31 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildCustomIconDesign() {
     return CustomNavigationBar(
       iconSize: 30.0,
-      selectedColor: Color(0xff0c18fb),
-      strokeColor: Color(0x300c18fb),
+      selectedColor: const Color(0xff0c18fb),
+      strokeColor: const Color(0x300c18fb),
       unSelectedColor: Colors.grey[600],
       backgroundColor: Colors.white,
       items: [
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.home,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.shoppingcart,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.cloudo,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(AntDesign.search1),
+          icon: const Icon(AntDesign.search1),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.user,
           ),
         ),
@@ -427,34 +431,34 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildBorderRadiusDesign() {
     return CustomNavigationBar(
       iconSize: 30.0,
-      selectedColor: Color(0xff0c18fb),
-      strokeColor: Color(0x300c18fb),
+      selectedColor: const Color(0xff0c18fb),
+      strokeColor: const Color(0x300c18fb),
       unSelectedColor: Colors.grey[600],
       backgroundColor: Colors.white,
-      borderRadius: Radius.circular(20.0),
+      borderRadius: const Radius.circular(20.0),
       items: [
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.home,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.shoppingcart,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.cloudo,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.search1,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.user,
           ),
         ),
@@ -471,34 +475,34 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildFloatingBar() {
     return CustomNavigationBar(
       iconSize: 30.0,
-      selectedColor: Color(0xff0c18fb),
-      strokeColor: Color(0x300c18fb),
+      selectedColor: const Color(0xff0c18fb),
+      strokeColor: const Color(0x300c18fb),
       unSelectedColor: Colors.grey[600],
       backgroundColor: Colors.white,
-      borderRadius: Radius.circular(20.0),
+      borderRadius: const Radius.circular(20.0),
       items: [
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.home,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.shoppingcart,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.cloudo,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.search1,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.user,
           ),
         ),
@@ -520,30 +524,30 @@ class _MyHomePageState extends State<MyHomePage> {
       strokeColor: Colors.white,
       unSelectedColor: Colors.grey[600],
       backgroundColor: Colors.black,
-      borderRadius: Radius.circular(20.0),
+      borderRadius: const Radius.circular(20.0),
       blurEffect: true,
       opacity: 0.8,
       items: [
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.home,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.shoppingcart,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.cloudo,
           ),
         ),
         CustomNavigationBarItem(
-          icon: Icon(AntDesign.search1),
+          icon: const Icon(AntDesign.search1),
         ),
         CustomNavigationBarItem(
-          icon: Icon(
+          icon: const Icon(
             AntDesign.user,
           ),
         ),
