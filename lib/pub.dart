@@ -76,14 +76,6 @@ class _SwipeActionPageState extends State<SwipeActionPage> {
     super.initState();
     controller = SwipeActionController(selectedIndexPathsChangeCallback:
         (changedIndexPaths, selected, currentCount) {
-      print(
-          'cell at ${changedIndexPaths.toString()} is/are ${selected ? 'selected' : 'unselected'} ,current selected count is $currentCount');
-
-      ///I just call setState() to update simply in this example.
-      ///But the whole page will be rebuilt.
-      ///So when you are developing,you'd better update a little piece
-      ///of UI sub tree for best performance....
-
       setState(() {});
     });
   }

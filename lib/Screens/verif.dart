@@ -17,13 +17,13 @@ class _VerificationState extends State<Verification> {
   final myth = PinTheme(
     width: 60,
     height: 60,
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
         fontSize: 20,
-        color: Color.fromRGBO(30, 60, 87, 1),
+        color: const Color.fromRGBO(30, 60, 87, 1),
         fontWeight: FontWeight.w600),
     decoration: BoxDecoration(
       border: Border.all(
-          style: BorderStyle.solid, width: 2.3, color: Color(ColorTxt)),
+          style: BorderStyle.solid, width: 2.3, color: const Color(ColorTxt)),
       borderRadius: BorderRadius.circular(20),
     ),
   );
@@ -34,14 +34,14 @@ class _VerificationState extends State<Verification> {
           resizeToAvoidBottomInset: false,
           backgroundColor: Colors.white,
           appBar: AppBar(
-            title: Text(
+            title: const Text(
               "OTP Verification",
               style: TextStyle(color: Color(ColorTxt)),
             ),
             centerTitle: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
-            leading: Icon(
+            leading: const Icon(
               Icons.arrow_back_ios,
               color: Color(ColorTxt),
             ),
@@ -52,51 +52,51 @@ class _VerificationState extends State<Verification> {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 28),
-                  Text("OTP Verification",
-                      style: TextStyle(
+                  const SizedBox(height: 28),
+                  const Text("OTP Verification",
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 30,
                           fontWeight: FontWeight.bold)),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
-                  Text("write your code to + 898 860 ***",
-                      style: TextStyle(
-                          color: Color(ColorTxt),
+                  const Text("write your code to + 898 860 ***",
+                      style: const TextStyle(
+                          color: const Color(ColorTxt),
                           fontSize: 17,
                           fontWeight: FontWeight.bold)),
-                  SizedBox(height: 6),
+                  const SizedBox(height: 6),
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Text("the code will expire in",
+                    const Text("the code will expire in",
                         style: TextStyle(
-                            color: Color(ColorTxt),
+                            color: const Color(ColorTxt),
                             fontSize: 16,
                             fontWeight: FontWeight.bold)),
-                    SizedBox(width: 4),
+                    const SizedBox(width: 4),
                     Text("00:30",
                         style: TextStyle(
                             color: Colors.red[300],
                             fontSize: 16,
                             fontWeight: FontWeight.bold)),
                   ]),
-                  SizedBox(
+                  const SizedBox(
                     height: 105,
                   ),
                   Center(
                     child: Pinput(
-                      separator: SizedBox(width: 21.6),
+                      separator: const SizedBox(width: 21.6),
                       length: 4,
                       defaultPinTheme: myth,
                       onCompleted: (pin) => print(pin),
                       onSubmitted: (pin) => print(pin),
                     ),
                   ),
-                  SizedBox(height: 130),
+                  const SizedBox(height: 130),
                   ButtonTheme(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFFF77546),
+                        primary: const Color(0xFFF77546),
                         fixedSize: const Size(300, 55),
                         shape: const StadiumBorder(),
                       ),
@@ -106,12 +106,12 @@ class _VerificationState extends State<Verification> {
                       },
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
-                  Text("Resend Otp Code",
-                      style: TextStyle(
-                          color: Color(ColorTxt),
+                  const Text("Resend Otp Code",
+                      style: const TextStyle(
+                          color: const Color(ColorTxt),
                           fontSize: 16,
                           decoration: TextDecoration.underline,
                           fontWeight: FontWeight.bold))

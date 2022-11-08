@@ -69,7 +69,7 @@ class _MyWidgetState extends State<MyWidget> {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       Checkbox(value: rememberMe, onChanged: _onRememberMeChanged),
-      Text(
+      const Text(
         "Remember me",
         style: TextStyle(
             color: Color(0xFFBFBFBF),
@@ -103,7 +103,7 @@ class CartCard extends StatelessWidget {
                     child: AspectRatio(
                       aspectRatio: 1.02,
                       child: Container(
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                           color: kSecondaryColor.withOpacity(0.1),
                           borderRadius: BorderRadius.circular(15),
@@ -123,17 +123,17 @@ class CartCard extends StatelessWidget {
                   children: [
                     Text(
                       cart.product.title,
-                        style: TextStyle(color: Color(ColorTxt), fontWeight: FontWeight.w900,fontSize: 16),
+                        style: const TextStyle(color: const Color(ColorTxt), fontWeight: FontWeight.w900,fontSize: 16),
                         
                       
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 7,
                     ),
                     Text.rich(TextSpan(children: [
                       TextSpan(
                         text: cart.product.price.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w500,
                           color: kPrimaryColor,
@@ -141,7 +141,7 @@ class CartCard extends StatelessWidget {
                       ),
                       TextSpan(
                           text: "  x${cart.numOfItem}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color(ColorTxt),
                               fontWeight: FontWeight.w700))
                     ])),

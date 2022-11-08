@@ -1,4 +1,4 @@
-import 'package:eapp/Networking/auth.dart';
+import 'package:eapp/data/Networking/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';

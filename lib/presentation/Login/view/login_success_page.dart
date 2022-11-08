@@ -1,6 +1,6 @@
-import '../custom_classes.dart';
+import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
-import '../constants.dart';
+import '../../../constants.dart';
 
 const ColorTxt = 0xFFBFBFBF;
 

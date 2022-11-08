@@ -1,6 +1,7 @@
+import 'package:eapp/presentation/resources/ColorManager.dart';
+import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
-import '../custom_classes.dart';
-import '../constants.dart';
+import '../../../constants.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -18,37 +19,37 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.white,
         title: Text(
           "Sign In",
-          style: TextStyle(color: textColor),
+          style: TextStyle(color: ColorManager.textColor),
         ),
         elevation: 0,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios_new,
             color: Colors.black,
           ),
           onPressed: () {},
         ),
       ),
-      body: ListView(padding: EdgeInsets.all(20), children: [
-        SizedBox(
+      body: ListView(padding: const EdgeInsets.all(20), children: [
+        const SizedBox(
           height: 30,
         ),
-        Text(
+        const Text(
           "Welcome Back",
           style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
           textAlign: TextAlign.center,
         ),
         Text(
           "Sign in with your email and password",
-          style: TextStyle(fontSize: 15, color: textColor),
+          style: TextStyle(fontSize: 15, color: ColorManager.textColor),
           textAlign: TextAlign.center,
         ),
         Text(
           "or continue with your social media",
-          style: TextStyle(fontSize: 15, color: textColor),
+          style: TextStyle(fontSize: 15, color: ColorManager.textColor),
           textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
         MyTextField(
@@ -56,14 +57,14 @@ class _LoginPageState extends State<LoginPage> {
           hint: "Enter your email",
           icon: Icons.mail_outline,
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         MyTextField(
             label: "Password",
             hint: "Enter your password",
             icon: Icons.lock_outline),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Row(
@@ -80,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                     }),
                 Text("Remember me",
                     style: TextStyle(
-                      color: textColor,
+                      color: ColorManager.textColor,
                     )),
               ],
             ),
@@ -88,7 +89,8 @@ class _LoginPageState extends State<LoginPage> {
               child: Text(
                 "Forgot Password",
                 style: TextStyle(
-                    color: textColor, decoration: TextDecoration.underline),
+                    color: ColorManager.textColor,
+                    decoration: TextDecoration.underline),
               ),
               onTap: () {
                 Navigator.pushNamed(context, "/reset");
@@ -96,14 +98,14 @@ class _LoginPageState extends State<LoginPage> {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         OrangeButton(
           onTap: () {},
           text: "Continue",
         ),
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
         Row(
@@ -113,14 +115,14 @@ class _LoginPageState extends State<LoginPage> {
               img: "google-icon.svg",
               onTap: () {},
             ),
-            SizedBox(
+            const SizedBox(
               width: 15,
             ),
             IconContainer(
               img: "facebook-2.svg",
               onTap: () {},
             ),
-            SizedBox(
+            const SizedBox(
               width: 15,
             ),
             IconContainer(
@@ -129,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Row(
@@ -137,12 +139,12 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Text(
               "Don't have an account? ",
-              style: TextStyle(color: textColor, fontSize: 20),
+              style: TextStyle(color:  ColorManager.textColor, fontSize: 20),
             ),
             GestureDetector(
-                child: Text(
+                child: const Text(
               "Sign Up",
-              style: TextStyle(color: Color(0xFFFF7643), fontSize: 20),
+              style: const TextStyle(color: Color(0xFFFF7643), fontSize: 20),
             ))
           ],
         )

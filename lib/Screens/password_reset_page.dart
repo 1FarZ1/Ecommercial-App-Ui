@@ -1,8 +1,11 @@
+import 'package:eapp/presentation/resources/ColorManager.dart';
+import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
-import '../custom_classes.dart';
-import '../constants.dart';
+
 
 class ResetPasswordPage extends StatefulWidget {
+  const ResetPasswordPage({Key? key}) : super(key: key);
+
   @override
   State<ResetPasswordPage> createState() => _ResetPasswordPageState();
 }
@@ -17,11 +20,11 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
         backgroundColor: Colors.white,
         title: Text(
           "Forgot Password",
-          style: TextStyle(color: textColor),
+          style: TextStyle(color: ColorManager.textColor),
         ),
         elevation: 0,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios_new,
             color: Colors.black,
           ),
@@ -31,56 +34,56 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
         ),
       ),
       body: ListView(
-              padding: EdgeInsets.all(20),
-              children: [
-                SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  "Forgot Password",
-                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
-                  textAlign: TextAlign.center,
-                ),
-                Text(
-                  "Please enter your email and we will send",
-                  style: TextStyle(fontSize: 15, color: textColor),
-                  textAlign: TextAlign.center,
-                ),
-                Text(
-                  "you a link to return to your account",
-                  style: TextStyle(fontSize: 15, color: textColor),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 80,
-                ),
-                MyTextField(
-                    label: "Email",
-                    hint: "Enter your email",
-                    icon: Icons.mail_outline),
-                SizedBox(
-                  height: 80,
-                ),
-                OrangeButton(onTap: () {}, text: "Continue"),
-                SizedBox(
-                  height: 60,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Don't have an account? ",
-                      style: TextStyle(color: textColor, fontSize: 20),
-                    ),
-                    GestureDetector(
-                        child: Text(
-                      "Sign Up",
-                      style: TextStyle(color: Color(0xFFFF7643), fontSize: 20),
-                    ))
-                  ],
-                )
-              ],
-            ),
+        padding: const EdgeInsets.all(20),
+        children: [
+          const SizedBox(
+            height: 30,
+          ),
+          const Text(
+            "Forgot Password",
+            style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            "Please enter your email and we will send",
+            style: TextStyle(fontSize: 15, color:  ColorManager.textColor),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            "you a link to return to your account",
+            style: TextStyle(fontSize: 15, color:  ColorManager.textColor),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(
+            height: 80,
+          ),
+          MyTextField(
+              label: "Email",
+              hint: "Enter your email",
+              icon: Icons.mail_outline),
+          const SizedBox(
+            height: 80,
+          ),
+          OrangeButton(onTap: () {}, text: "Continue"),
+          const SizedBox(
+            height: 60,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Don't have an account? ",
+                style: TextStyle(color:  ColorManager.textColor, fontSize: 20),
+              ),
+              GestureDetector(
+                  child: const Text(
+                "Sign Up",
+                style:  TextStyle(color: Color(0xFFFF7643), fontSize: 20),
+              ))
+            ],
+          )
+        ],
+      ),
     );
   }
 }

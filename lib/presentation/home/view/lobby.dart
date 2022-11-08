@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import "../my_classes.dart";
+import '../../../my_classes.dart';
 
 const kPrimaryColor = Color(0xFFFF7643);
 const kPrimaryLightColor = Color(0xFFFFECDF);
