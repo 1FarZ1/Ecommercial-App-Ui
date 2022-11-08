@@ -1,29 +1,29 @@
+import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
-import '../../../my_classes.dart';
+
 import 'package:pinput/pinput.dart';
 
-const ColorTxt = 0xFFBFBFBF;
-
 class Verification extends StatefulWidget {
+  const Verification({Key? key}) : super(key: key);
+
   @override
   State<Verification> createState() => _VerificationState();
 }
 
 class _VerificationState extends State<Verification> {
   bool checkedValue = false;
-  bool _onEditing = true;
   final myth = PinTheme(
     width: 60,
     height: 60,
     textStyle: const TextStyle(
         fontSize: 20,
-        color: const Color.fromRGBO(30, 60, 87, 1),
+        color: Color.fromRGBO(30, 60, 87, 1),
         fontWeight: FontWeight.w600),
     decoration: BoxDecoration(
       border: Border.all(
-          style: BorderStyle.solid, width: 2.3, color: const Color(ColorTxt)),
+          style: BorderStyle.solid, width: 2.3, color:  ColorManager.KTextColor),
       borderRadius: BorderRadius.circular(20),
     ),
   );
@@ -34,16 +34,16 @@ class _VerificationState extends State<Verification> {
           resizeToAvoidBottomInset: false,
           backgroundColor: Colors.white,
           appBar: AppBar(
-            title: const Text(
+            title:  Text(
               "OTP Verification",
-              style: TextStyle(color: Color(ColorTxt)),
+              style: TextStyle(color:ColorManager.KTextColor),
             ),
             centerTitle: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
-            leading: const Icon(
+            leading:  Icon(
               Icons.arrow_back_ios,
-              color: Color(ColorTxt),
+              color: ColorManager.KTextColor,
             ),
           ),
           body: SafeArea(
@@ -54,23 +54,23 @@ class _VerificationState extends State<Verification> {
                 children: [
                   const SizedBox(height: 28),
                   const Text("OTP Verification",
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: Colors.black,
                           fontSize: 30,
                           fontWeight: FontWeight.bold)),
                   const SizedBox(
                     height: 15,
                   ),
-                  const Text("write your code to + 898 860 ***",
-                      style: const TextStyle(
-                          color: const Color(ColorTxt),
+                   Text("write your code to + 898 860 ***",
+                      style: TextStyle(
+                          color: ColorManager.KTextColor,
                           fontSize: 17,
                           fontWeight: FontWeight.bold)),
                   const SizedBox(height: 6),
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    const Text("the code will expire in",
+                     Text("the code will expire in",
                         style: TextStyle(
-                            color: const Color(ColorTxt),
+                            color:ColorManager.KTextColor,
                             fontSize: 16,
                             fontWeight: FontWeight.bold)),
                     const SizedBox(width: 4),
@@ -109,9 +109,9 @@ class _VerificationState extends State<Verification> {
                   const SizedBox(
                     height: 50,
                   ),
-                  const Text("Resend Otp Code",
-                      style: const TextStyle(
-                          color: const Color(ColorTxt),
+                   Text("Resend Otp Code",
+                      style: TextStyle(
+                          color: ColorManager.KTextColor,
                           fontSize: 16,
                           decoration: TextDecoration.underline,
                           fontWeight: FontWeight.bold))

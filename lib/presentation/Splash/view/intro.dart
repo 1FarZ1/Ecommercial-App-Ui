@@ -3,7 +3,6 @@
 import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:eapp/presentation/resources/const.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class Intro extends StatefulWidget {
   const Intro({Key? key}) : super(key: key);
@@ -123,7 +122,7 @@ class SplashContent extends StatelessWidget {
     return Column(
       children: <Widget>[
         const Spacer(),
-        const Text(
+         Text(
           "TOKOTO",
           style:  TextStyle(
             fontSize: (36),

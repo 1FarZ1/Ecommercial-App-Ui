@@ -1,15 +1,9 @@
+import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../my_classes.dart';
 
-const kPrimaryColor = Color(0xFFFF7643);
-const kPrimaryLightColor = Color(0xFFFFECDF);
-const kSecondaryColor = Color(0xFF979797);
-const kTextColor = Color(0xFF757575);
-const ColorTxt = 0xFFBFBFBF;
 const FontWeight based = FontWeight.bold;
 
 class Lobby extends StatefulWidget {
@@ -35,10 +29,10 @@ class _LobbyState extends State<Lobby> {
         backgroundColor: Colors.white,
         body: SafeArea(
             child: Padding(
-                padding: EdgeInsets.all(14),
+                padding: const EdgeInsets.all(14),
                 child: SingleChildScrollView(
                   child: Column(children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Row(
@@ -52,33 +46,33 @@ class _LobbyState extends State<Lobby> {
 
                                 //TODO will back to this and remove the space between thsi 2 widgets
 
-                                prefixIconConstraints: BoxConstraints(
+                                prefixIconConstraints: const BoxConstraints(
                                   minWidth: 30,
                                 ),
                                 prefixIcon: IconButton(
                                   onPressed: () {
-                                    print("pressed");
+                                 
                                   },
-                                  icon: Icon(Icons.search),
+                                  icon: const Icon(Icons.search),
                                 ),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(70.0),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     width: 0,
                                     style: BorderStyle.none,
                                   ),
                                 ),
                                 filled: true,
-                                hintStyle: TextStyle(
+                                hintStyle: const TextStyle(
                                     color: Color.fromARGB(255, 119, 118, 118)),
                                 hintText: "Search Product",
-                                fillColor: Color(0xFFF3F3F4)),
+                                fillColor: const Color(0xFFF3F3F4)),
                           ),
                         ),
                         IconBtnWithCounter(
                           svgSrc: "assets/icons/Cart Icon.svg",
                           numOfitem: 3,
-                          press: (){
+                          press: () {
                             Navigator.pushReplacementNamed(context, "/cart");
                           },
                         ),
@@ -98,8 +92,9 @@ class _LobbyState extends State<Lobby> {
                         IconBtnWithCounter(
                           svgSrc: "assets/icons/Bill Icon.svg",
                           numOfitem: 2,
-                          press: (){
-                            Navigator.pushReplacementNamed(context, "/profilepage");
+                          press: () {
+                            Navigator.pushReplacementNamed(
+                                context, "/profilepage");
                           },
                         ),
                         // ElevatedButton(
@@ -115,23 +110,23 @@ class _LobbyState extends State<Lobby> {
                         // ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Container(
                       // height: 90,
                       width: double.infinity,
-                      margin: EdgeInsets.all(15),
-                      padding: EdgeInsets.symmetric(
+                      margin: const EdgeInsets.all(15),
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 15,
                       ),
                       decoration: BoxDecoration(
-                        color: Color(0xFF4A3298),
+                        color: const Color(0xFF4A3298),
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Text.rich(
-                        TextSpan(
+                      child: const Text.rich(
+                         TextSpan(
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(text: "A Summer Surpise\n"),
@@ -147,7 +142,7 @@ class _LobbyState extends State<Lobby> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -161,13 +156,13 @@ class _LobbyState extends State<Lobby> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Special for you",
                           style: TextStyle(
                             fontSize: 18,
@@ -176,16 +171,16 @@ class _LobbyState extends State<Lobby> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            print("me");
+                         
                           },
-                          child: Text(
+                          child: const Text(
                             "See More",
                             style: TextStyle(color: Color(0xFFBBBBBB)),
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
@@ -201,18 +196,18 @@ class _LobbyState extends State<Lobby> {
                               category: "Fashion",
                               numOfBrands: 24,
                               press: () {
-                                print("smartphone section");
+                             
                               },
                             ),
                           ],
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "Popular Product",
                           style: TextStyle(
                             fontSize: 18,
@@ -221,7 +216,7 @@ class _LobbyState extends State<Lobby> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            print("me");
+                        
                           },
                           child: const Text(
                             "See More",
@@ -230,19 +225,17 @@ class _LobbyState extends State<Lobby> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(left: 3),
+                              padding: const EdgeInsets.only(left: 3),
                               child: SizedBox(
                                 width: 140,
                                 child: GestureDetector(
-                                  onTap: () {
-                                    
-                                  },
+                                  onTap: () {},
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -250,9 +243,9 @@ class _LobbyState extends State<Lobby> {
                                       AspectRatio(
                                         aspectRatio: 1.02,
                                         child: Container(
-                                          padding: EdgeInsets.all(25),
+                                          padding: const EdgeInsets.all(25),
                                           decoration: BoxDecoration(
-                                            color: kSecondaryColor
+                                            color: ColorManager.kSecondaryColor
                                                 .withOpacity(0.1),
                                             borderRadius:
                                                 BorderRadius.circular(15),
@@ -265,7 +258,7 @@ class _LobbyState extends State<Lobby> {
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      Text(
+                                      const Text(
                                         "Ps4 controller",
                                         style: TextStyle(color: Colors.black),
                                         maxLines: 2,
@@ -279,7 +272,7 @@ class _LobbyState extends State<Lobby> {
                                             style: TextStyle(
                                               fontSize: 20,
                                               fontWeight: FontWeight.w600,
-                                              color: kPrimaryColor,
+                                              color: ColorManager.kPrimaryColor,
                                             ),
                                           ),
                                           InkWell(
@@ -287,22 +280,23 @@ class _LobbyState extends State<Lobby> {
                                                 BorderRadius.circular(50),
                                             onTap: () {},
                                             child: Container(
-                                              padding: EdgeInsets.all((8)),
+                                              padding:
+                                                  const EdgeInsets.all((8)),
                                               height: 28,
                                               width: (38),
                                               decoration: BoxDecoration(
-                                                color: true
-                                                    ? kPrimaryColor
+                                                color: true // implement it later on
+                                                    ? ColorManager.kPrimaryColor
                                                         .withOpacity(0.15)
-                                                    : kSecondaryColor
+                                                    : ColorManager.kSecondaryColor
                                                         .withOpacity(0.1),
                                                 shape: BoxShape.circle,
                                               ),
                                               child: SvgPicture.asset(
                                                 "assets/icons/Game Icon.svg",
                                                 color: true
-                                                    ? Color(0xFFFF4848)
-                                                    : Color(0xFFDBDEE4),
+                                                    ? const Color(0xFFFF4848)
+                                                    : const Color(0xFFDBDEE4),
                                               ),
                                             ),
                                           ),
@@ -314,7 +308,7 @@ class _LobbyState extends State<Lobby> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 15),
+                              padding: const EdgeInsets.only(left: 15),
                               child: SizedBox(
                                 width: 140,
                                 child: GestureDetector(
@@ -326,9 +320,9 @@ class _LobbyState extends State<Lobby> {
                                       AspectRatio(
                                         aspectRatio: 1.02,
                                         child: Container(
-                                          padding: EdgeInsets.all(25),
+                                          padding: const EdgeInsets.all(25),
                                           decoration: BoxDecoration(
-                                            color: kSecondaryColor
+                                            color: ColorManager.kSecondaryColor
                                                 .withOpacity(0.1),
                                             borderRadius:
                                                 BorderRadius.circular(15),
@@ -341,7 +335,7 @@ class _LobbyState extends State<Lobby> {
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      Text(
+                                      const Text(
                                         "Pants",
                                         style: TextStyle(color: Colors.black),
                                         maxLines: 2,
@@ -355,7 +349,7 @@ class _LobbyState extends State<Lobby> {
                                             style: TextStyle(
                                               fontSize: 20,
                                               fontWeight: FontWeight.w600,
-                                              color: kPrimaryColor,
+                                              color: ColorManager.kPrimaryColor,
                                             ),
                                           ),
                                           InkWell(
@@ -363,22 +357,23 @@ class _LobbyState extends State<Lobby> {
                                                 BorderRadius.circular(50),
                                             onTap: () {},
                                             child: Container(
-                                              padding: EdgeInsets.all((8)),
+                                              padding:
+                                                  const EdgeInsets.all((8)),
                                               height: 28,
                                               width: (28),
                                               decoration: BoxDecoration(
                                                 color: true
-                                                    ? kPrimaryColor
+                                                    ? ColorManager.kPrimaryColor
                                                         .withOpacity(0.15)
-                                                    : kSecondaryColor
+                                                    : ColorManager.kSecondaryColor
                                                         .withOpacity(0.1),
                                                 shape: BoxShape.circle,
                                               ),
                                               child: SvgPicture.asset(
                                                 "assets/icons/Star Icon.svg",
                                                 color: true
-                                                    ? Color(0xFFFF4848)
-                                                    : Color(0xFFDBDEE4),
+                                                    ? const Color(0xFFFF4848)
+                                                    : const Color(0xFFDBDEE4),
                                               ),
                                             ),
                                           ),
@@ -390,7 +385,7 @@ class _LobbyState extends State<Lobby> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 20),
+                              padding: const EdgeInsets.only(left: 20),
                               child: SizedBox(
                                 width: 150,
                                 child: GestureDetector(
@@ -402,9 +397,9 @@ class _LobbyState extends State<Lobby> {
                                       AspectRatio(
                                         aspectRatio: 1.02,
                                         child: Container(
-                                          padding: EdgeInsets.all(25),
+                                          padding: const EdgeInsets.all(25),
                                           decoration: BoxDecoration(
-                                            color: kSecondaryColor
+                                            color: ColorManager.kSecondaryColor
                                                 .withOpacity(0.1),
                                             borderRadius:
                                                 BorderRadius.circular(15),
@@ -417,9 +412,10 @@ class _LobbyState extends State<Lobby> {
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      Text(
+                                      const Text(
                                         "Helmet",
-                                        style: TextStyle(color: Colors.black),
+                                        style:  TextStyle(
+                                            color: Colors.black),
                                         maxLines: 2,
                                       ),
                                       Row(
@@ -431,7 +427,7 @@ class _LobbyState extends State<Lobby> {
                                             style: TextStyle(
                                               fontSize: 20,
                                               fontWeight: FontWeight.w600,
-                                              color: kPrimaryColor,
+                                              color: ColorManager.kPrimaryColor,
                                             ),
                                           ),
                                           InkWell(
@@ -439,22 +435,23 @@ class _LobbyState extends State<Lobby> {
                                                 BorderRadius.circular(50),
                                             onTap: () {},
                                             child: Container(
-                                              padding: EdgeInsets.all((8)),
+                                              padding:
+                                                  const EdgeInsets.all((8)),
                                               height: 28,
                                               width: (28),
                                               decoration: BoxDecoration(
                                                 color: true
-                                                    ? kPrimaryColor
+                                                    ? ColorManager.kPrimaryColor
                                                         .withOpacity(0.15)
-                                                    : kSecondaryColor
+                                                    : ColorManager.kSecondaryColor
                                                         .withOpacity(0.1),
                                                 shape: BoxShape.circle,
                                               ),
                                               child: SvgPicture.asset(
                                                 "assets/icons/Star Icon.svg",
                                                 color: false
-                                                    ? Color(0xFFFF4848)
-                                                    : Color(0xFFDBDEE4),
+                                                    ? const Color(0xFFFF4848)
+                                                    : const Color(0xFFDBDEE4),
                                               ),
                                             ),
                                           ),
@@ -478,22 +475,22 @@ class _LobbyState extends State<Lobby> {
           backgroundColor: Colors.white,
           items: [
             CustomNavigationBarItem(
-              icon: Icon(
+              icon: const Icon(
                 AntDesign.home,
               ),
             ),
             CustomNavigationBarItem(
-              icon: Icon(
+              icon: const Icon(
                 AntDesign.heart,
               ),
             ),
             CustomNavigationBarItem(
-              icon: Icon(
+              icon: const Icon(
                 AntDesign.message1,
               ),
             ),
             CustomNavigationBarItem(
-              icon: Icon(AntDesign.user),
+              icon: const Icon(AntDesign.user),
             ),
           ],
           currentIndex: _currentIndex,
@@ -531,16 +528,16 @@ class CategoryCard extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               height: 55,
               width: 55,
               decoration: BoxDecoration(
-                color: Color(0xFFFFECDF),
+                color: const Color(0xFFFFECDF),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: SvgPicture.asset(icon!),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Text(text!, textAlign: TextAlign.center)
           ],
         ),
@@ -565,7 +562,7 @@ class SpecialOfferCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: (20)),
+      padding: const EdgeInsets.only(left: (20)),
       child: GestureDetector(
         onTap: press,
         child: SizedBox(
@@ -586,24 +583,24 @@ class SpecialOfferCard extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Color(0xFF343434).withOpacity(0.4),
-                        Color(0xFF343434).withOpacity(0.15),
+                        const Color(0xFF343434).withOpacity(0.4),
+                        const Color(0xFF343434).withOpacity(0.15),
                       ],
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 15.0,
                     vertical: 10,
                   ),
                   child: Text.rich(
                     TextSpan(
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       children: [
                         TextSpan(
                           text: "$category\n",
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
@@ -621,6 +618,7 @@ class SpecialOfferCard extends StatelessWidget {
     );
   }
 }
+
 class IconBtnWithCounter extends StatelessWidget {
   const IconBtnWithCounter({
     Key? key,
@@ -642,11 +640,11 @@ class IconBtnWithCounter extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Container(
-            padding: EdgeInsets.all((12)),
+            padding: const EdgeInsets.all((12)),
             height: (46),
             width: (46),
             decoration: BoxDecoration(
-              color: kSecondaryColor.withOpacity(0.1),
+              color: ColorManager.kSecondaryColor.withOpacity(0.1),
               shape: BoxShape.circle,
             ),
             child: SvgPicture.asset(svgSrc),
@@ -659,14 +657,14 @@ class IconBtnWithCounter extends StatelessWidget {
                 height: (16),
                 width: (16),
                 decoration: BoxDecoration(
-                  color: Color(0xFFFF4848),
+                  color: const Color(0xFFFF4848),
                   shape: BoxShape.circle,
                   border: Border.all(width: 1.5, color: Colors.white),
                 ),
                 child: Center(
                   child: Text(
                     "$numOfitem",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: (10),
                       height: 1,
                       fontWeight: FontWeight.w600,
@@ -681,4 +679,3 @@ class IconBtnWithCounter extends StatelessWidget {
     );
   }
 }
-

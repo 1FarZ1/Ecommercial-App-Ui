@@ -20,7 +20,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
         backgroundColor: Colors.white,
         title: Text(
           "Forgot Password",
-          style: TextStyle(color: ColorManager.textColor),
+          style: TextStyle(color: ColorManager.KTextColor),
         ),
         elevation: 0,
         leading: IconButton(
@@ -46,12 +46,12 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
           ),
           Text(
             "Please enter your email and we will send",
-            style: TextStyle(fontSize: 15, color:  ColorManager.textColor),
+            style: TextStyle(fontSize: 15, color:  ColorManager.KTextColor),
             textAlign: TextAlign.center,
           ),
           Text(
             "you a link to return to your account",
-            style: TextStyle(fontSize: 15, color:  ColorManager.textColor),
+            style: TextStyle(fontSize: 15, color:  ColorManager.KTextColor),
             textAlign: TextAlign.center,
           ),
           const SizedBox(
@@ -73,7 +73,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
             children: [
               Text(
                 "Don't have an account? ",
-                style: TextStyle(color:  ColorManager.textColor, fontSize: 20),
+                style: TextStyle(color:  ColorManager.KTextColor, fontSize: 20),
               ),
               GestureDetector(
                   child: const Text(

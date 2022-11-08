@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.white,
         title: Text(
           "Sign In",
-          style: TextStyle(color: ColorManager.textColor),
+          style: TextStyle(color: ColorManager.KTextColor),
         ),
         elevation: 0,
         leading: IconButton(
@@ -42,12 +42,12 @@ class _LoginPageState extends State<LoginPage> {
         ),
         Text(
           "Sign in with your email and password",
-          style: TextStyle(fontSize: 15, color: ColorManager.textColor),
+          style: TextStyle(fontSize: 15, color: ColorManager.KTextColor),
           textAlign: TextAlign.center,
         ),
         Text(
           "or continue with your social media",
-          style: TextStyle(fontSize: 15, color: ColorManager.textColor),
+          style: TextStyle(fontSize: 15, color: ColorManager.KTextColor),
           textAlign: TextAlign.center,
         ),
         const SizedBox(
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                     }),
                 Text("Remember me",
                     style: TextStyle(
-                      color: ColorManager.textColor,
+                      color: ColorManager.KTextColor,
                     )),
               ],
             ),
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Text(
                 "Forgot Password",
                 style: TextStyle(
-                    color: ColorManager.textColor,
+                    color: ColorManager.KTextColor,
                     decoration: TextDecoration.underline),
               ),
               onTap: () {
@@ -140,12 +140,12 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Text(
               "Don't have an account? ",
-              style: TextStyle(color: ColorManager.textColor, fontSize: 20),
+              style: TextStyle(color: ColorManager.KTextColor, fontSize: 20),
             ),
             GestureDetector(
                 child: Text(
               "Sign Up",
-              style: TextStyle(color: ColorManager.orange, fontSize: 20),
+              style: TextStyle(color: ColorManager.kOrange, fontSize: 20),
             ))
           ],
         )

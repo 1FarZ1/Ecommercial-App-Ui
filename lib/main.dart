@@ -9,29 +9,28 @@ import 'package:flutter/material.dart';
 import 'package:eapp/Screens/SignUp.dart';
 import 'package:eapp/Screens/profile.dart';
 import 'package:eapp/presentation/verifScreen/view/verif.dart';
-import 'package:provider/provider.dart';
 import 'package:eapp/presentation/Login/view/login_success_page.dart';
 import 'package:eapp/presentation/profileScreen/view/profile_page.dart';
 import 'package:eapp/presentation/Login/view/login_page.dart';
-import 'package:eapp/Screens/register.dart';
 
-void main()async {
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-   await Firebase.initializeApp();
-  runApp(
-    MaterialApp(
-    debugShowCheckedModeBanner: false,
-    initialRoute: "/intro", routes: {
-    "/": (context) => SignUp(),
-    "/profile": (context) => Profile(),
-    "/verif": (context) => Verification(),
-    "/home": (context) => Lobby(),
-    '/cart': (context) => CartP(),
-    '/intro': (context) => Intro(),
-    '/success': (context) => LoginSuccessPage(),
-    '/reset': (context) => ResetPasswordPage(),
-    '/profilepage': (context) => ProfilePage(),
-    '/register': (context) => Register(),
-    // '/login':(context)=>LoginPage(),
-    }));
+  await Firebase.initializeApp();
+  runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: "/intro",
+      routes: {
+        "/": (context) => SignUp(),
+        "/profile": (context) => Profile(),
+        "/verif": (context) => const Verification(),
+        "/home": (context) => Lobby(),
+        '/cart': (context) => const CardCard(),
+        '/intro': (context) => const Intro(),
+        '/success': (context) => const LoginSuccessPage(),
+        '/reset': (context) => const ResetPasswordPage(),
+        '/profilepage': (context) => ProfilePage(),
+        '/register': (context) => Register(),
+        // '/login':(context)=>LoginPage(),
+      }));
 }

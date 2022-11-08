@@ -1,9 +1,9 @@
+// ignore_for_file: unnecessary_const
+
+import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import "../my_classes.dart";
-
-const ColorTxt = 0xFFBFBFBF;
 
 class Register extends StatefulWidget {
   @override
@@ -20,16 +20,16 @@ class _RegisterState extends State<Register> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text(
+        title:  Text(
           "Sign Up",
-          style: TextStyle(color: Color(ColorTxt)),
+          style: TextStyle(color: ColorManager.KTextColor),
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const Icon(
+        leading: Icon(
           Icons.arrow_back_ios,
-          color: const Color(ColorTxt),
+          color: ColorManager.KTextColor,
         ),
       ),
       body: SafeArea(
@@ -48,13 +48,13 @@ class _RegisterState extends State<Register> {
             ),
             Text("Complete your details or continue ",
                 style:
-                    TextStyle(color: const Color(ColorTxt), fontWeight: based)),
+                    TextStyle(color:  ColorManager.KTextColor, fontWeight: based)),
             const SizedBox(
               height: 5,
             ),
             Text("with your social media",
                 style:
-                    TextStyle(color: const Color(ColorTxt), fontWeight: based)),
+                    TextStyle(color: ColorManager.KTextColor, fontWeight: based)),
             const SizedBox(height: 33),
             TextField(
               decoration: InputDecoration(
@@ -65,9 +65,7 @@ class _RegisterState extends State<Register> {
                     minWidth: 70,
                   ),
                   suffixIcon: IconButton(
-                    onPressed: () {
-                     
-                    },
+                    onPressed: () {},
                     icon: const Icon(Icons.mail_outline),
                   ),
                   border: OutlineInputBorder(
@@ -78,8 +76,8 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                   filled: true,
-                  hintStyle: const TextStyle(
-                    color: Color(ColorTxt),
+                  hintStyle:  TextStyle(
+                    color: ColorManager.KTextColor,
                   ),
                   hintText: "  Enter Your Email",
                   fillColor: Colors.white),
@@ -109,8 +107,8 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                   filled: true,
-                  hintStyle: const TextStyle(
-                    color: Color(ColorTxt),
+                  hintStyle:  TextStyle(
+                    color:ColorManager.KTextColor,
                   ),
                   hintText: "  Enter Your Password",
                   fillColor: Colors.white),
@@ -127,9 +125,7 @@ class _RegisterState extends State<Register> {
                   ),
                   floatingLabelBehavior: FloatingLabelBehavior.always,
                   suffixIcon: IconButton(
-                    onPressed: () {
-                      print("pressed");
-                    },
+                    onPressed: () {},
                     icon: const Icon(Icons.lock),
                   ),
                   border: OutlineInputBorder(
@@ -140,8 +136,8 @@ class _RegisterState extends State<Register> {
                     ),
                   ),
                   filled: true,
-                  hintStyle: const TextStyle(
-                    color: Color(ColorTxt),
+                  hintStyle:  TextStyle(
+                    color: ColorManager.KTextColor,
                   ),
                   hintText: "  Enter Your Password",
                   fillColor: Colors.white),
@@ -184,19 +180,19 @@ class _RegisterState extends State<Register> {
             const SizedBox(
               height: 20,
             ),
-            const Text.rich(const TextSpan(children: [
+             Text.rich( TextSpan(children: [
               TextSpan(
                 text: "by continuing you confirm that you agree\n",
                 style: TextStyle(
                   fontSize: 12,
-                  color: Color(ColorTxt),
+                  color:ColorManager.KTextColor,
                 ),
               ),
               TextSpan(
                   text: "          With our terms and conditions",
                   style: TextStyle(
                     fontSize: 12,
-                    color: const Color(ColorTxt),
+                    color:  ColorManager.KTextColor,
                   ))
             ])),
 

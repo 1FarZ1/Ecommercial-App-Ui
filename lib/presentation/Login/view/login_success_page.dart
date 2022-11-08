@@ -16,9 +16,9 @@ class _LoginSuccessPageState extends State<LoginSuccessPage> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: const Color(0xffF8F9F9),
-        title: const Text(
+        title:  Text(
           "Login Success",
-          style: TextStyle(color: ColorManager.ColorTxt),
+          style: TextStyle(color: ColorManager.KTextColor),
         ),
         elevation: 0,
         leading: const SizedBox(),

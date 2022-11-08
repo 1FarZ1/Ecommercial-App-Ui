@@ -1,9 +1,9 @@
 import 'package:eapp/data/Networking/auth.dart';
 import 'package:eapp/presentation/resources/ColorManager.dart';
+import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import "../my_classes.dart";
+
 
 class SignUp extends StatefulWidget {
   @override
@@ -20,16 +20,16 @@ class _SignUpState extends State<SignUp> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text(
+        title:  Text(
           "Sign in",
-          style: TextStyle(color: ColorManager.ColorTxt),
+          style: TextStyle(color: ColorManager.KTextColor),
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const Icon(
+        leading:  Icon(
           Icons.arrow_back_ios,
-          color: ColorManager.ColorTxt,
+          color: ColorManager.KTextColor,
         ),
       ),
       body: SafeArea(
@@ -48,13 +48,13 @@ class _SignUpState extends State<SignUp> {
             ),
             Text("Sign up with your email or password ",
                 style:
-                    TextStyle(color: const Color(ColorTxt), fontWeight: based)),
+                    TextStyle(color:  ColorManager.KTextColor, fontWeight: based)),
             const SizedBox(
               height: 5,
             ),
             Text("or continue with your social media",
                 style:
-                    TextStyle(color: const Color(ColorTxt), fontWeight: based)),
+                    TextStyle(color:  ColorManager.KTextColor, fontWeight: based)),
             const SizedBox(height: 65),
             TextField(
               decoration: InputDecoration(
@@ -76,8 +76,8 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                   filled: true,
-                  hintStyle: const TextStyle(
-                    color: ColorManager.ColorTxt,
+                  hintStyle:  TextStyle(
+                    color: ColorManager.KTextColor,
                   ),
                   hintText: "  Enter Your Email",
                   fillColor: Colors.white),
@@ -105,8 +105,8 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                   filled: true,
-                  hintStyle: const TextStyle(
-                    color: ColorManager.ColorTxt,
+                  hintStyle:  TextStyle(
+                    color: ColorManager.KTextColor,
                   ),
                   hintText: "  Enter Your Password",
                   fillColor: Colors.white),
@@ -116,7 +116,7 @@ class _SignUpState extends State<SignUp> {
             ),
             Row(
               children: [
-                MyWidget(),
+                const RememberMeWidget(),
                 const SizedBox(width: 95),
                 GestureDetector(
                   onTap: () {
@@ -124,7 +124,7 @@ class _SignUpState extends State<SignUp> {
                   },
                   child: Text("Forget Password",
                       style: TextStyle(
-                          color: const Color(ColorTxt),
+                          color:  ColorManager.KTextColor,
                           decoration: TextDecoration.underline,
                           fontWeight: based)),
                 ),
@@ -174,11 +174,11 @@ class _SignUpState extends State<SignUp> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                 Text(
                   "Don't have an Account ? ",
                   style: TextStyle(
                     fontSize: 15,
-                    color:  ColorManager.ColorTxt,
+                    color:  ColorManager.KTextColor,
                   ),
                 ),
                 //will change this to text button
@@ -189,7 +189,7 @@ class _SignUpState extends State<SignUp> {
                     child: Text(
                       "Sign up",
                       style:
-                          TextStyle(color: ColorManager.orange, fontSize: 15),
+                          TextStyle(color: ColorManager.kOrange, fontSize: 15),
                     ))
               ],
             )

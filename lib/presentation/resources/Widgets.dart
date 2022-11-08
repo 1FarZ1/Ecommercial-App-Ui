@@ -1,5 +1,6 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, file_names
 
+import 'package:eapp/domaine/model/models.dart';
 import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,7 @@ class MyTextField extends StatelessWidget {
             padding: const EdgeInsets.only(right: 20),
             child: Icon(
               icon,
-              color: ColorManager.textColor,
+              color: ColorManager.KTextColor,
               size: 30,
             ),
           ),
@@ -127,7 +128,7 @@ class CustomCardButton extends StatelessWidget {
           children: [
             SvgPicture.asset(
               "assets/icons/$icon",
-              color: ColorManager.orange,
+              color: ColorManager.kOrange,
             ),
             const SizedBox(
               width: 20,
@@ -138,11 +139,11 @@ class CustomCardButton extends StatelessWidget {
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w600,
-                  color: ColorManager.textColor),
+                  color: ColorManager.KTextColor),
             )),
             SvgPicture.asset(
               "assets/icons/arrow_right.svg",
-              color: ColorManager.textColor,
+              color: ColorManager.KTextColor,
             ),
           ],
         ),
@@ -418,8 +419,7 @@ class _RememberMeWidgetState extends State<RememberMeWidget> {
   }
 }
 
-
-// CartCardWidget 
+// CartCardWidget
 class CartCard extends StatelessWidget {
   const CartCard({
     Key? key,
@@ -430,64 +430,62 @@ class CartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 100,
-                  child: GestureDetector(
-                    onTap: () {
-                      print("tapped");
-                    },
-                    child: AspectRatio(
-                      aspectRatio: 1.02,
-                      child: Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: kSecondaryColor.withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Hero(
-                          tag: "1",
-                          child: Image.asset(
-                              cart.product.images[0]),
-                        ),
-                      ),
-                    ),
+      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 100,
+            child: GestureDetector(
+              onTap: () {},
+              child: AspectRatio(
+                aspectRatio: 1.02,
+                child: Container(
+                  padding: const EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    color: ColorManager.kSecondaryColor.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Hero(
+                    tag: "1",
+                    child: Image.asset(cart.product.images[0]),
                   ),
                 ),
-                const SizedBox(width: 19),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      cart.product.title,
-                        style:  TextStyle(color:  ColorManager.KTextColor, fontWeight: FontWeight.w900,fontSize: 16),
-                        
-                      
-                    ),
-                    const SizedBox(
-                      height: 7,
-                    ),
-                    Text.rich(TextSpan(children: [
-                      TextSpan(
-                        text: cart.product.price.toString(),
-                        style:  TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                          color: ColorManager.kPrimaryColor,
-                        ),
-                      ),
-                      TextSpan(
-                          text: "  x${cart.numOfItem}",
-                          style:  TextStyle(
-                              color: ColorManager.KTextColor,
-                              fontWeight: FontWeight.w700))
-                    ])),
-                  ],
-                ),
-              ],
+              ),
             ),
-          );
+          ),
+          const SizedBox(width: 19),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                cart.product.title,
+                style: TextStyle(
+                    color: ColorManager.KTextColor,
+                    fontWeight: FontWeight.w900,
+                    fontSize: 16),
+              ),
+              const SizedBox(
+                height: 7,
+              ),
+              Text.rich(TextSpan(children: [
+                TextSpan(
+                  text: cart.product.price.toString(),
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: ColorManager.kPrimaryColor,
+                  ),
+                ),
+                TextSpan(
+                    text: "  x${cart.numOfItem}",
+                    style: TextStyle(
+                        color: ColorManager.KTextColor,
+                        fontWeight: FontWeight.w700))
+              ])),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }

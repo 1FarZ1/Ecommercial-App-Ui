@@ -21,7 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
           backgroundColor: Colors.white,
           title: Text(
             "Profile",
-            style: TextStyle(color: ColorManager.textColor),
+            style: TextStyle(color: ColorManager.KTextColor),
           ),
           elevation: 0,
           leading: IconButton(

@@ -1,7 +1,7 @@
+import 'package:eapp/domaine/model/models.dart';
+import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import '../../../my_classes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 const kPrimaryColor = Color(0xFFFF7643);
@@ -115,12 +115,14 @@ List<Cart> demoCarts = [
   Cart(product: items[4], numOfItem: 2),
 ];
 
-class CartP extends StatefulWidget {
+class CardCard extends StatefulWidget {
+  const CardCard({Key? key}) : super(key: key);
+
   @override
-  State<CartP> createState() => _CartPState();
+  State<CardCard> createState() => _CardCardState();
 }
 
-class _CartPState extends State<CartP> {
+class _CardCardState extends State<CardCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -137,7 +139,7 @@ class _CartPState extends State<CartP> {
             Text("${demoCarts.length} items",
                 // ignore: unnecessary_const
                 style:
-                    const TextStyle(color: const Color(ColorTxt), fontSize: 14))
+                     TextStyle(color:   ColorManager.KTextColor, fontSize: 14))
           ],
         ),
         centerTitle: true,

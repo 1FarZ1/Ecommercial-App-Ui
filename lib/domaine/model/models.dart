@@ -1,12 +1,7 @@
-import "package:flutter/material.dart";
-import 'package:pinput/pinput.dart';
+import 'package:flutter/material.dart';
 
-
-
-
-//crating a  product Object 
-class Product{
-   final int id;
+class Product {
+  final int id;
   final String title, description;
   final List<String> images;
   final List<Color> colors;
@@ -26,21 +21,9 @@ class Product{
   });
 }
 
-
-
-
-
-// Creating a Cart Object 
-class Cart{
-
+class Cart {
   final Product product;
   final int numOfItem;
 
   Cart({required this.product, required this.numOfItem});
-
 }
-
-
-
-
-// cart Cartcard widget
