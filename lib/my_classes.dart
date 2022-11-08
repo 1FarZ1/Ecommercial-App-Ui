@@ -1,11 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:pinput/pinput.dart';
 
-const kPrimaryColor = Color(0xFFFF7643);
-const kPrimaryLightColor = Color(0xFFFFECDF);
-const kSecondaryColor = Color(0xFF979797);
-const kTextColor = Color(0xFF757575);
-const ColorTxt = 0xFFBFBFBF;
+
 
 
 //crating a  product Object 
@@ -46,109 +42,5 @@ class Cart{
 
 
 
-// rememeber me widget
-class MyWidget extends StatefulWidget {
-  @override
-  State<MyWidget> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<MyWidget> {
-  bool rememberMe = false;
-
-  void _onRememberMeChanged(newValue) => setState(() {
-        rememberMe = newValue;
-
-        if (rememberMe) {
-          print('he is');
-        } else {
-          print('he is not');
-        }
-      });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-      Checkbox(value: rememberMe, onChanged: _onRememberMeChanged),
-      const Text(
-        "Remember me",
-        style: TextStyle(
-            color: Color(0xFFBFBFBF),
-            fontWeight: FontWeight.bold,
-            fontSize: 15),
-      ),
-    ]);
-  }
-}
 
 // cart Cartcard widget
-class CartCard extends StatelessWidget {
-  const CartCard({
-    Key? key,
-    required this.cart,
-  }) : super(key: key);
-
-  final Cart cart;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 100,
-                  child: GestureDetector(
-                    onTap: () {
-                      print("tapped");
-                    },
-                    child: AspectRatio(
-                      aspectRatio: 1.02,
-                      child: Container(
-                        padding: const EdgeInsets.all(15),
-                        decoration: BoxDecoration(
-                          color: kSecondaryColor.withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Hero(
-                          tag: "1",
-                          child: Image.asset(
-                              cart.product.images[0]),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 19),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      cart.product.title,
-                        style: const TextStyle(color: const Color(ColorTxt), fontWeight: FontWeight.w900,fontSize: 16),
-                        
-                      
-                    ),
-                    const SizedBox(
-                      height: 7,
-                    ),
-                    Text.rich(TextSpan(children: [
-                      TextSpan(
-                        text: cart.product.price.toString(),
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                          color: kPrimaryColor,
-                        ),
-                      ),
-                      TextSpan(
-                          text: "  x${cart.numOfItem}",
-                          style: const TextStyle(
-                              color: Color(ColorTxt),
-                              fontWeight: FontWeight.w700))
-                    ])),
-                  ],
-                ),
-              ],
-            ),
-          );
-  }
-}

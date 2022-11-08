@@ -1,3 +1,4 @@
+import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../../../my_classes.dart';
@@ -135,7 +136,8 @@ class _CartPState extends State<CartP> {
             ),
             Text("${demoCarts.length} items",
                 // ignore: unnecessary_const
-                style: const TextStyle(color: const Color(ColorTxt), fontSize: 14))
+                style:
+                    const TextStyle(color: const Color(ColorTxt), fontSize: 14))
           ],
         ),
         centerTitle: true,
@@ -270,40 +272,6 @@ class _CartPState extends State<CartP> {
                 ],
               ),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class DefaultButton extends StatelessWidget {
-  const DefaultButton({
-    Key? key,
-    this.text,
-    this.press,
-  }) : super(key: key);
-  final String? text;
-  final Function? press;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 56,
-      child: TextButton(
-        style: TextButton.styleFrom(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          primary: Colors.white,
-          backgroundColor: kPrimaryColor,
-        ),
-        onPressed: press as void Function()?,
-        child: Text(
-          text!,
-          style: const TextStyle(
-            fontSize: 18,
-            color: Colors.white,
           ),
         ),
       ),

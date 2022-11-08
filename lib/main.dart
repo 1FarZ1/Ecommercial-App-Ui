@@ -11,7 +11,7 @@ import 'package:eapp/Screens/profile.dart';
 import 'package:eapp/presentation/verifScreen/view/verif.dart';
 import 'package:provider/provider.dart';
 import 'package:eapp/presentation/Login/view/login_success_page.dart';
-import 'package:eapp/Screens/profile_page.dart';
+import 'package:eapp/presentation/profileScreen/view/profile_page.dart';
 import 'package:eapp/presentation/Login/view/login_page.dart';
 import 'package:eapp/Screens/register.dart';
 
