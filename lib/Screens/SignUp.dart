@@ -1,4 +1,4 @@
-import 'package:eapp/data/Networking/auth.dart';
+
 import 'package:eapp/presentation/resources/ColorManager.dart';
 import 'package:eapp/presentation/resources/Widgets.dart';
 import 'package:flutter/material.dart';
@@ -140,7 +140,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 child: const Text('Continue'),
                 onPressed: () {
-                  AuthManager().SignInAnonmy();
+                 
                   Navigator.pushReplacementNamed(context, "/success");
                 },
               ),
