@@ -44,6 +44,10 @@ dependencies:
   firebase_auth: ^3.6.1
   cloud_firestore: ^3.4.2
   firebase_core: ^1.20.0
+  rxdart: ^0.27.5
+  freezed_annotation: ^2.2.0
+  easy_localization: ^3.0.1
+  lottie: ^1.4.2
   
   
 dev_dependencies:

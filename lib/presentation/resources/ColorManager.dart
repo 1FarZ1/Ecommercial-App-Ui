@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names, non_constant_identifier_names
+// ignore_for_file: constant_identifier_names, non_constant_identifier_names, file_names
 
 import 'package:flutter/material.dart';
 
@@ -11,4 +11,5 @@ class ColorManager {
   static Color kSecondaryColor = const Color(0xFF979797);
   static Color kwhite = const Color.fromARGB(255, 255, 255, 255);
   static Color kError = const Color.fromARGB(255, 255, 0, 0);
+  static Color kblack = const Color.fromARGB(255, 0, 0, 0);
 }
