@@ -1,5 +1,8 @@
-#  this is A Ecommerce app from my journey to learn app dev with flutter ,i got it From the flutter way youtube channel, i tried to recreate this design myself and give it a bit of functionalty,for now this project isnt done yet , and theres a little bugs on it, and some feutures isnt done yet,so in the future i will try tu update it and fix all the bugs,
 
+# Moc Tech
+
+
+### Ecommercial App to Manage Your Shop and handle Buy and Sells in it (Design Inspired By The Flutter Way)
 
 ## Splash Screen
 ![image](https://user-images.githubusercontent.com/91225280/179404726-f2b538cc-0ddc-47d6-8053-f050ec125101.png)
@@ -28,5 +31,31 @@
 ## Cart Screen
 ![image](https://user-images.githubusercontent.com/91225280/179405467-5e52608b-7f30-489f-973c-cc381bb0f3b8.png)
 
+## Authors
+- @1FarZ1
+## Contributing
+- Contributions are always welcome!
+## Documentation
+(Will be Updated Soon)
+ - Documentation
 
-details Screen
+## Installation
+- git clone https://github.com/1FarZ1/quizzler.git
+- cd quizzler
+- flutter packages get
+- flutter run
+## Feedback
+- If you have any feedback, please reach out to us at f_bekkouche@estin.dz
+## Acknowledgements
+### FAQ
+## What is appNAME
+- APP NAME IS  ................................ 
+## Is appname .... ?
+- appname .......................
+## License
+-  MIT
+## Support
+- For support, email f_bekkouche@estin.dz
+## Badges
+Add badges from somewhere like: shields.io
+MIT License GPLv3 License AGPL License
