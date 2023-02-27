@@ -14,8 +14,8 @@
  - Documentation
 
 ## Installation
-- git clone https://github.com/1FarZ1/quizzler.git
-- cd quizzler
+- git clone https://github.com/1FarZ1/Ecommercial-App.git
+- cd Ecommercial-App
 - flutter packages get
 - flutter run
 ## Feedback
